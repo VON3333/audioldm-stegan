@@ -4,6 +4,18 @@
 
 This repo currently support Text-to-Audio (including Music), Text-to-Speech Generation and Super Resolution Inpainting.
 
+v1 CUDA_VISIBLE_DEVICES=7 python verify_ddim_reversibility.py --model_name audioldm2-speech-ljspeech -t "A female reporter is speaking full of emotion" --transcription "Wish you have a good day" --ddim_steps 50 --ddim_eta 0 --guidance_scale 3.5 --seed 0 --save_pt outputs\ddim_reversibility.pt
+
+v2 CUDA_VISIBLE_DEVICES=7 python verify_ddim_reversibility.py --model_name audioldm2-speech-ljspeech -t "A female reporter is speaking full of emotion" --transcription "Wish you have a good day" --ddim_steps 100 --ddim_eta 0 --guidance_scale 3.5 --seed 0 --bits_per_z 1 --message_seed 1234 --save_pt outputs/ddim_bits_1b.pt
+
+v3 CUDA_VISIBLE_DEVICES=7 python verify_ddim_reversibility.py --model_name audioldm2-speech-ljspeech -t "A female reporter is speaking full of emotion" --transcription "Wish you have a good day" --ddim_steps 100 --ddim_eta 0 --guidance_scale 3.5 --seed 0 --bits_per_z 1 --message_seed 1234 --save_cover_wav outputs/cover.wav --save_stego_wav outputs/stego_bits_1b.wav --save_pt outputs/ddim_bits_1b.pt
+
+v4 CUDA_VISIBLE_DEVICES=7 python verify_ddim_reversibility.py --model_name audioldm2-speech-ljspeech -t "A female reporter is speaking full of emotion" --transcription "Wish you have a good day" --ddim_steps 100 --ddim_eta 0 --guidance_scale 3.5 --seed 0 --bits_per_z 1 --message_seed 1234 --save_cover_wav outputs_v4/cover.wav --save_stego_wav outputs_v4/stego_bits_1b.wav --audio_roundtrip --vae_encode_mode mode --save_pt outputs_v4/ddim_bits_1b.pt
+
+CUDA_VISIBLE_DEVICES=7 python verify_ddim_reversibility_v4.py --model_name audioldm2-speech-ljspeech -t "A female reporter is speaking full of emotion" --transcription "The future belongs to those who believe in the beauty of their dreams. Stay curious, keep learning, and never stop exploring the world around you." --ddim_steps 100 --ddim_eta 0 --guidance_scale 3.5 --seed 0 --bits_per_z 1 --message_seed 1234 --save_cover_wav outputs_v7/cover.wav --save_stego_wav outputs_v7/stego_bits_1b.wav --audio_roundtrip --vae_encode_mode mode --save_pt outputs_v4/ddim_bits_1b.pt
+
+v5 CUDA_VISIBLE_DEVICES=7 python verify_ddim_reversibility.py --model_name audioldm2-speech-ljspeech -t "A female reporter is speaking full of emotion" --transcription "Wish you have a good day" --ddim_steps 100 --ddim_eta 0 --guidance_scale 3.5 --seed 0 --bits_per_z 1 --message_seed 1234 --save_cover_wav outputs_v5/cover.wav --save_stego_wav outputs_v5/stego_bits_1b.wav --audio_roundtrip --vae_encode_mode mode --save_pt outputs_v5/ddim_bits_1b.pt
+
 <hr>
 
 ## Change Log

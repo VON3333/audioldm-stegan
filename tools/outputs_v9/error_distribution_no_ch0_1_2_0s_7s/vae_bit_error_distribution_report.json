@@ -1,0 +1,694 @@
+{
+  "settings": {
+    "vae_pt": "outputs_v9/ablate_vae_no_ch0_1_2_0s_7s.pt",
+    "input_pt": "outputs_v9/ddim_bits_1b_no_ch0_1_2_0s_7s.pt",
+    "time_block": 16,
+    "freq_block": 4,
+    "shape": [
+      1,
+      8,
+      256,
+      16
+    ],
+    "analyzed_positions": 14400,
+    "exclude_channels": [
+      0,
+      1,
+      2
+    ],
+    "duration": 10.0,
+    "embed_start_sec": 0.0,
+    "embed_end_sec": 7.0,
+    "time_start_idx": 0,
+    "time_end_idx": 180
+  },
+  "overall": {
+    "total_bits": 14400,
+    "bit_errors": 1259,
+    "bit_error_rate": 0.08743055555555555,
+    "bit_accuracy": 0.9125694444444444
+  },
+  "bit_value_metrics": {
+    "bit0": {
+      "total": 7207,
+      "errors": 230,
+      "ber": 0.03191341751075343
+    },
+    "bit1": {
+      "total": 7193,
+      "errors": 1029,
+      "ber": 0.1430557486445155
+    }
+  },
+  "concentration": {
+    "num_groups": 240,
+    "total_errors": 1259,
+    "top_1pct_error_share": 0.030182684670373314,
+    "top_5pct_error_share": 0.14773629864972201,
+    "top_10pct_error_share": 0.26846703733121524,
+    "groups_for_50pct_errors": 56,
+    "groups_for_80pct_errors": 121
+  },
+  "z_stats_by_error": {
+    "recovered_z_correct_mean": -0.20183397829532623,
+    "recovered_z_correct_std": 0.7947688698768616,
+    "recovered_z_error_mean": -0.19241438806056976,
+    "recovered_z_error_std": 0.3834417760372162,
+    "abs_recovered_z_correct_mean": 0.7062245011329651,
+    "abs_recovered_z_error_mean": 0.29252418875694275,
+    "abs_z_diff_correct_mean": 0.3194967806339264,
+    "abs_z_diff_error_mean": 0.967013955116272
+  },
+  "by_channel": [
+    {
+      "channel": 0,
+      "total": 0,
+      "errors": 0,
+      "ber": null
+    },
+    {
+      "channel": 1,
+      "total": 0,
+      "errors": 0,
+      "ber": null
+    },
+    {
+      "channel": 2,
+      "total": 0,
+      "errors": 0,
+      "ber": null
+    },
+    {
+      "channel": 3,
+      "total": 2880,
+      "errors": 217,
+      "ber": 0.07534722238779068
+    },
+    {
+      "channel": 4,
+      "total": 2880,
+      "errors": 179,
+      "ber": 0.06215277686715126
+    },
+    {
+      "channel": 5,
+      "total": 2880,
+      "errors": 365,
+      "ber": 0.1267361044883728
+    },
+    {
+      "channel": 6,
+      "total": 2880,
+      "errors": 281,
+      "ber": 0.09756944328546524
+    },
+    {
+      "channel": 7,
+      "total": 2880,
+      "errors": 217,
+      "ber": 0.07534722238779068
+    }
+  ],
+  "by_freq": [
+    {
+      "freq": 0,
+      "total": 900,
+      "errors": 188,
+      "ber": 0.20888888835906982
+    },
+    {
+      "freq": 1,
+      "total": 900,
+      "errors": 136,
+      "ber": 0.15111111104488373
+    },
+    {
+      "freq": 2,
+      "total": 900,
+      "errors": 111,
+      "ber": 0.12333333492279053
+    },
+    {
+      "freq": 3,
+      "total": 900,
+      "errors": 104,
+      "ber": 0.11555555462837219
+    },
+    {
+      "freq": 4,
+      "total": 900,
+      "errors": 63,
+      "ber": 0.07000000029802322
+    },
+    {
+      "freq": 5,
+      "total": 900,
+      "errors": 78,
+      "ber": 0.08666666597127914
+    },
+    {
+      "freq": 6,
+      "total": 900,
+      "errors": 55,
+      "ber": 0.06111111119389534
+    },
+    {
+      "freq": 7,
+      "total": 900,
+      "errors": 58,
+      "ber": 0.06444444507360458
+    },
+    {
+      "freq": 8,
+      "total": 900,
+      "errors": 66,
+      "ber": 0.07333333045244217
+    },
+    {
+      "freq": 9,
+      "total": 900,
+      "errors": 45,
+      "ber": 0.05000000074505806
+    },
+    {
+      "freq": 10,
+      "total": 900,
+      "errors": 36,
+      "ber": 0.03999999910593033
+    },
+    {
+      "freq": 11,
+      "total": 900,
+      "errors": 40,
+      "ber": 0.04444444552063942
+    },
+    {
+      "freq": 12,
+      "total": 900,
+      "errors": 44,
+      "ber": 0.04888888821005821
+    },
+    {
+      "freq": 13,
+      "total": 900,
+      "errors": 45,
+      "ber": 0.05000000074505806
+    },
+    {
+      "freq": 14,
+      "total": 900,
+      "errors": 67,
+      "ber": 0.07444444298744202
+    },
+    {
+      "freq": 15,
+      "total": 900,
+      "errors": 123,
+      "ber": 0.1366666704416275
+    }
+  ],
+  "top_error_blocks": [
+    {
+      "channel": 3,
+      "time_start": 48,
+      "time_end": 64,
+      "freq_start": 0,
+      "freq_end": 4,
+      "total": 64,
+      "errors": 20,
+      "ber": 0.3125,
+      "time_sec_start": 1.875,
+      "time_sec_end": 2.5
+    },
+    {
+      "channel": 3,
+      "time_start": 176,
+      "time_end": 192,
+      "freq_start": 4,
+      "freq_end": 8,
+      "total": 16,
+      "errors": 5,
+      "ber": 0.3125,
+      "time_sec_start": 6.875,
+      "time_sec_end": 7.5
+    },
+    {
+      "channel": 5,
+      "time_start": 112,
+      "time_end": 128,
+      "freq_start": 0,
+      "freq_end": 4,
+      "total": 64,
+      "errors": 18,
+      "ber": 0.28125,
+      "time_sec_start": 4.375,
+      "time_sec_end": 5.0
+    },
+    {
+      "channel": 5,
+      "time_start": 160,
+      "time_end": 176,
+      "freq_start": 0,
+      "freq_end": 4,
+      "total": 64,
+      "errors": 17,
+      "ber": 0.265625,
+      "time_sec_start": 6.25,
+      "time_sec_end": 6.875
+    },
+    {
+      "channel": 3,
+      "time_start": 176,
+      "time_end": 192,
+      "freq_start": 0,
+      "freq_end": 4,
+      "total": 16,
+      "errors": 4,
+      "ber": 0.25,
+      "time_sec_start": 6.875,
+      "time_sec_end": 7.5
+    },
+    {
+      "channel": 5,
+      "time_start": 96,
+      "time_end": 112,
+      "freq_start": 0,
+      "freq_end": 4,
+      "total": 64,
+      "errors": 16,
+      "ber": 0.25,
+      "time_sec_start": 3.75,
+      "time_sec_end": 4.375
+    },
+    {
+      "channel": 5,
+      "time_start": 176,
+      "time_end": 192,
+      "freq_start": 0,
+      "freq_end": 4,
+      "total": 16,
+      "errors": 4,
+      "ber": 0.25,
+      "time_sec_start": 6.875,
+      "time_sec_end": 7.5
+    },
+    {
+      "channel": 5,
+      "time_start": 176,
+      "time_end": 192,
+      "freq_start": 4,
+      "freq_end": 8,
+      "total": 16,
+      "errors": 4,
+      "ber": 0.25,
+      "time_sec_start": 6.875,
+      "time_sec_end": 7.5
+    },
+    {
+      "channel": 6,
+      "time_start": 176,
+      "time_end": 192,
+      "freq_start": 0,
+      "freq_end": 4,
+      "total": 16,
+      "errors": 4,
+      "ber": 0.25,
+      "time_sec_start": 6.875,
+      "time_sec_end": 7.5
+    },
+    {
+      "channel": 3,
+      "time_start": 112,
+      "time_end": 128,
+      "freq_start": 0,
+      "freq_end": 4,
+      "total": 64,
+      "errors": 15,
+      "ber": 0.234375,
+      "time_sec_start": 4.375,
+      "time_sec_end": 5.0
+    },
+    {
+      "channel": 6,
+      "time_start": 80,
+      "time_end": 96,
+      "freq_start": 0,
+      "freq_end": 4,
+      "total": 64,
+      "errors": 15,
+      "ber": 0.234375,
+      "time_sec_start": 3.125,
+      "time_sec_end": 3.75
+    },
+    {
+      "channel": 6,
+      "time_start": 96,
+      "time_end": 112,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 64,
+      "errors": 15,
+      "ber": 0.234375,
+      "time_sec_start": 3.75,
+      "time_sec_end": 4.375
+    },
+    {
+      "channel": 3,
+      "time_start": 80,
+      "time_end": 96,
+      "freq_start": 0,
+      "freq_end": 4,
+      "total": 64,
+      "errors": 14,
+      "ber": 0.21875,
+      "time_sec_start": 3.125,
+      "time_sec_end": 3.75
+    },
+    {
+      "channel": 3,
+      "time_start": 144,
+      "time_end": 160,
+      "freq_start": 0,
+      "freq_end": 4,
+      "total": 64,
+      "errors": 14,
+      "ber": 0.21875,
+      "time_sec_start": 5.625,
+      "time_sec_end": 6.25
+    },
+    {
+      "channel": 4,
+      "time_start": 112,
+      "time_end": 128,
+      "freq_start": 0,
+      "freq_end": 4,
+      "total": 64,
+      "errors": 14,
+      "ber": 0.21875,
+      "time_sec_start": 4.375,
+      "time_sec_end": 5.0
+    },
+    {
+      "channel": 5,
+      "time_start": 32,
+      "time_end": 48,
+      "freq_start": 0,
+      "freq_end": 4,
+      "total": 64,
+      "errors": 14,
+      "ber": 0.21875,
+      "time_sec_start": 1.25,
+      "time_sec_end": 1.875
+    },
+    {
+      "channel": 5,
+      "time_start": 128,
+      "time_end": 144,
+      "freq_start": 0,
+      "freq_end": 4,
+      "total": 64,
+      "errors": 14,
+      "ber": 0.21875,
+      "time_sec_start": 5.0,
+      "time_sec_end": 5.625
+    },
+    {
+      "channel": 3,
+      "time_start": 16,
+      "time_end": 32,
+      "freq_start": 0,
+      "freq_end": 4,
+      "total": 64,
+      "errors": 13,
+      "ber": 0.203125,
+      "time_sec_start": 0.625,
+      "time_sec_end": 1.25
+    },
+    {
+      "channel": 3,
+      "time_start": 160,
+      "time_end": 176,
+      "freq_start": 0,
+      "freq_end": 4,
+      "total": 64,
+      "errors": 13,
+      "ber": 0.203125,
+      "time_sec_start": 6.25,
+      "time_sec_end": 6.875
+    },
+    {
+      "channel": 4,
+      "time_start": 96,
+      "time_end": 112,
+      "freq_start": 0,
+      "freq_end": 4,
+      "total": 64,
+      "errors": 13,
+      "ber": 0.203125,
+      "time_sec_start": 3.75,
+      "time_sec_end": 4.375
+    }
+  ],
+  "lowest_error_blocks": [
+    {
+      "channel": 3,
+      "time_start": 0,
+      "time_end": 16,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 0,
+      "ber": 0.0,
+      "time_sec_start": 0.0,
+      "time_sec_end": 0.625
+    },
+    {
+      "channel": 3,
+      "time_start": 32,
+      "time_end": 48,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 0,
+      "ber": 0.0,
+      "time_sec_start": 1.25,
+      "time_sec_end": 1.875
+    },
+    {
+      "channel": 3,
+      "time_start": 32,
+      "time_end": 48,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 64,
+      "errors": 0,
+      "ber": 0.0,
+      "time_sec_start": 1.25,
+      "time_sec_end": 1.875
+    },
+    {
+      "channel": 3,
+      "time_start": 64,
+      "time_end": 80,
+      "freq_start": 4,
+      "freq_end": 8,
+      "total": 64,
+      "errors": 0,
+      "ber": 0.0,
+      "time_sec_start": 2.5,
+      "time_sec_end": 3.125
+    },
+    {
+      "channel": 3,
+      "time_start": 96,
+      "time_end": 112,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 0,
+      "ber": 0.0,
+      "time_sec_start": 3.75,
+      "time_sec_end": 4.375
+    },
+    {
+      "channel": 3,
+      "time_start": 112,
+      "time_end": 128,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 0,
+      "ber": 0.0,
+      "time_sec_start": 4.375,
+      "time_sec_end": 5.0
+    },
+    {
+      "channel": 3,
+      "time_start": 144,
+      "time_end": 160,
+      "freq_start": 4,
+      "freq_end": 8,
+      "total": 64,
+      "errors": 0,
+      "ber": 0.0,
+      "time_sec_start": 5.625,
+      "time_sec_end": 6.25
+    },
+    {
+      "channel": 3,
+      "time_start": 176,
+      "time_end": 192,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 16,
+      "errors": 0,
+      "ber": 0.0,
+      "time_sec_start": 6.875,
+      "time_sec_end": 7.5
+    },
+    {
+      "channel": 3,
+      "time_start": 176,
+      "time_end": 192,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 16,
+      "errors": 0,
+      "ber": 0.0,
+      "time_sec_start": 6.875,
+      "time_sec_end": 7.5
+    },
+    {
+      "channel": 4,
+      "time_start": 16,
+      "time_end": 32,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 64,
+      "errors": 0,
+      "ber": 0.0,
+      "time_sec_start": 0.625,
+      "time_sec_end": 1.25
+    },
+    {
+      "channel": 4,
+      "time_start": 144,
+      "time_end": 160,
+      "freq_start": 4,
+      "freq_end": 8,
+      "total": 64,
+      "errors": 0,
+      "ber": 0.0,
+      "time_sec_start": 5.625,
+      "time_sec_end": 6.25
+    },
+    {
+      "channel": 6,
+      "time_start": 176,
+      "time_end": 192,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 16,
+      "errors": 0,
+      "ber": 0.0,
+      "time_sec_start": 6.875,
+      "time_sec_end": 7.5
+    },
+    {
+      "channel": 7,
+      "time_start": 144,
+      "time_end": 160,
+      "freq_start": 4,
+      "freq_end": 8,
+      "total": 64,
+      "errors": 0,
+      "ber": 0.0,
+      "time_sec_start": 5.625,
+      "time_sec_end": 6.25
+    },
+    {
+      "channel": 3,
+      "time_start": 16,
+      "time_end": 32,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 1,
+      "ber": 0.015625,
+      "time_sec_start": 0.625,
+      "time_sec_end": 1.25
+    },
+    {
+      "channel": 3,
+      "time_start": 16,
+      "time_end": 32,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 64,
+      "errors": 1,
+      "ber": 0.015625,
+      "time_sec_start": 0.625,
+      "time_sec_end": 1.25
+    },
+    {
+      "channel": 3,
+      "time_start": 48,
+      "time_end": 64,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 1,
+      "ber": 0.015625,
+      "time_sec_start": 1.875,
+      "time_sec_end": 2.5
+    },
+    {
+      "channel": 3,
+      "time_start": 48,
+      "time_end": 64,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 64,
+      "errors": 1,
+      "ber": 0.015625,
+      "time_sec_start": 1.875,
+      "time_sec_end": 2.5
+    },
+    {
+      "channel": 3,
+      "time_start": 64,
+      "time_end": 80,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 1,
+      "ber": 0.015625,
+      "time_sec_start": 2.5,
+      "time_sec_end": 3.125
+    },
+    {
+      "channel": 3,
+      "time_start": 96,
+      "time_end": 112,
+      "freq_start": 4,
+      "freq_end": 8,
+      "total": 64,
+      "errors": 1,
+      "ber": 0.015625,
+      "time_sec_start": 3.75,
+      "time_sec_end": 4.375
+    },
+    {
+      "channel": 3,
+      "time_start": 96,
+      "time_end": 112,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 64,
+      "errors": 1,
+      "ber": 0.015625,
+      "time_sec_start": 3.75,
+      "time_sec_end": 4.375
+    }
+  ]
+}

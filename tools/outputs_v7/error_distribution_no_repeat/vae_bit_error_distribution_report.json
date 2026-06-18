@@ -1,0 +1,603 @@
+{
+  "settings": {
+    "vae_pt": "outputs_v7/ablate_vae_10s.pt",
+    "input_pt": "outputs_v7/ddim_bits_1b_10s.pt",
+    "time_block": 16,
+    "freq_block": 4,
+    "shape": [
+      1,
+      8,
+      256,
+      16
+    ]
+  },
+  "overall": {
+    "total_bits": 32768,
+    "bit_errors": 7833,
+    "bit_error_rate": 0.239044189453125,
+    "bit_accuracy": 0.760955810546875
+  },
+  "bit_value_metrics": {
+    "bit0": {
+      "total": 16378,
+      "errors": 2600,
+      "ber": 0.15874954206862865
+    },
+    "bit1": {
+      "total": 16390,
+      "errors": 5233,
+      "ber": 0.3192800488102501
+    }
+  },
+  "concentration": {
+    "num_groups": 512,
+    "total_errors": 7833,
+    "top_1pct_error_share": 0.02463934635516405,
+    "top_5pct_error_share": 0.11974977658623771,
+    "top_10pct_error_share": 0.22430741733690795,
+    "groups_for_50pct_errors": 127,
+    "groups_for_80pct_errors": 257
+  },
+  "z_stats_by_error": {
+    "recovered_z_correct_mean": -0.2985217869281769,
+    "recovered_z_correct_std": 1.1171901226043701,
+    "recovered_z_error_mean": -0.28519344329833984,
+    "recovered_z_error_std": 0.9155062437057495,
+    "abs_recovered_z_correct_mean": 0.9402285218238831,
+    "abs_recovered_z_error_mean": 0.6718776822090149,
+    "abs_z_diff_correct_mean": 0.5257651209831238,
+    "abs_z_diff_error_mean": 1.346367359161377
+  },
+  "by_channel": [
+    {
+      "channel": 0,
+      "total": 4096,
+      "errors": 813,
+      "ber": 0.198486328125
+    },
+    {
+      "channel": 1,
+      "total": 4096,
+      "errors": 1793,
+      "ber": 0.437744140625
+    },
+    {
+      "channel": 2,
+      "total": 4096,
+      "errors": 1770,
+      "ber": 0.43212890625
+    },
+    {
+      "channel": 3,
+      "total": 4096,
+      "errors": 575,
+      "ber": 0.140380859375
+    },
+    {
+      "channel": 4,
+      "total": 4096,
+      "errors": 950,
+      "ber": 0.23193359375
+    },
+    {
+      "channel": 5,
+      "total": 4096,
+      "errors": 734,
+      "ber": 0.17919921875
+    },
+    {
+      "channel": 6,
+      "total": 4096,
+      "errors": 642,
+      "ber": 0.15673828125
+    },
+    {
+      "channel": 7,
+      "total": 4096,
+      "errors": 556,
+      "ber": 0.1357421875
+    }
+  ],
+  "by_freq": [
+    {
+      "freq": 0,
+      "total": 2048,
+      "errors": 541,
+      "ber": 0.26416015625
+    },
+    {
+      "freq": 1,
+      "total": 2048,
+      "errors": 531,
+      "ber": 0.25927734375
+    },
+    {
+      "freq": 2,
+      "total": 2048,
+      "errors": 525,
+      "ber": 0.25634765625
+    },
+    {
+      "freq": 3,
+      "total": 2048,
+      "errors": 516,
+      "ber": 0.251953125
+    },
+    {
+      "freq": 4,
+      "total": 2048,
+      "errors": 513,
+      "ber": 0.25048828125
+    },
+    {
+      "freq": 5,
+      "total": 2048,
+      "errors": 482,
+      "ber": 0.2353515625
+    },
+    {
+      "freq": 6,
+      "total": 2048,
+      "errors": 531,
+      "ber": 0.25927734375
+    },
+    {
+      "freq": 7,
+      "total": 2048,
+      "errors": 475,
+      "ber": 0.23193359375
+    },
+    {
+      "freq": 8,
+      "total": 2048,
+      "errors": 482,
+      "ber": 0.2353515625
+    },
+    {
+      "freq": 9,
+      "total": 2048,
+      "errors": 441,
+      "ber": 0.21533203125
+    },
+    {
+      "freq": 10,
+      "total": 2048,
+      "errors": 441,
+      "ber": 0.21533203125
+    },
+    {
+      "freq": 11,
+      "total": 2048,
+      "errors": 451,
+      "ber": 0.22021484375
+    },
+    {
+      "freq": 12,
+      "total": 2048,
+      "errors": 454,
+      "ber": 0.2216796875
+    },
+    {
+      "freq": 13,
+      "total": 2048,
+      "errors": 499,
+      "ber": 0.24365234375
+    },
+    {
+      "freq": 14,
+      "total": 2048,
+      "errors": 470,
+      "ber": 0.2294921875
+    },
+    {
+      "freq": 15,
+      "total": 2048,
+      "errors": 481,
+      "ber": 0.23486328125
+    }
+  ],
+  "top_error_blocks": [
+    {
+      "channel": 0,
+      "time_start": 224,
+      "time_end": 240,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 64,
+      "errors": 40,
+      "ber": 0.625
+    },
+    {
+      "channel": 3,
+      "time_start": 240,
+      "time_end": 256,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 39,
+      "ber": 0.609375
+    },
+    {
+      "channel": 1,
+      "time_start": 64,
+      "time_end": 80,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 64,
+      "errors": 38,
+      "ber": 0.59375
+    },
+    {
+      "channel": 2,
+      "time_start": 224,
+      "time_end": 240,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 38,
+      "ber": 0.59375
+    },
+    {
+      "channel": 6,
+      "time_start": 240,
+      "time_end": 256,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 38,
+      "ber": 0.59375
+    },
+    {
+      "channel": 1,
+      "time_start": 48,
+      "time_end": 64,
+      "freq_start": 4,
+      "freq_end": 8,
+      "total": 64,
+      "errors": 37,
+      "ber": 0.578125
+    },
+    {
+      "channel": 1,
+      "time_start": 192,
+      "time_end": 208,
+      "freq_start": 4,
+      "freq_end": 8,
+      "total": 64,
+      "errors": 37,
+      "ber": 0.578125
+    },
+    {
+      "channel": 2,
+      "time_start": 224,
+      "time_end": 240,
+      "freq_start": 4,
+      "freq_end": 8,
+      "total": 64,
+      "errors": 37,
+      "ber": 0.578125
+    },
+    {
+      "channel": 7,
+      "time_start": 224,
+      "time_end": 240,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 64,
+      "errors": 37,
+      "ber": 0.578125
+    },
+    {
+      "channel": 0,
+      "time_start": 224,
+      "time_end": 240,
+      "freq_start": 4,
+      "freq_end": 8,
+      "total": 64,
+      "errors": 36,
+      "ber": 0.5625
+    },
+    {
+      "channel": 1,
+      "time_start": 224,
+      "time_end": 240,
+      "freq_start": 4,
+      "freq_end": 8,
+      "total": 64,
+      "errors": 36,
+      "ber": 0.5625
+    },
+    {
+      "channel": 2,
+      "time_start": 112,
+      "time_end": 128,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 64,
+      "errors": 36,
+      "ber": 0.5625
+    },
+    {
+      "channel": 2,
+      "time_start": 224,
+      "time_end": 240,
+      "freq_start": 0,
+      "freq_end": 4,
+      "total": 64,
+      "errors": 36,
+      "ber": 0.5625
+    },
+    {
+      "channel": 3,
+      "time_start": 224,
+      "time_end": 240,
+      "freq_start": 4,
+      "freq_end": 8,
+      "total": 64,
+      "errors": 36,
+      "ber": 0.5625
+    },
+    {
+      "channel": 3,
+      "time_start": 240,
+      "time_end": 256,
+      "freq_start": 4,
+      "freq_end": 8,
+      "total": 64,
+      "errors": 36,
+      "ber": 0.5625
+    },
+    {
+      "channel": 0,
+      "time_start": 224,
+      "time_end": 240,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 35,
+      "ber": 0.546875
+    },
+    {
+      "channel": 1,
+      "time_start": 48,
+      "time_end": 64,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 64,
+      "errors": 35,
+      "ber": 0.546875
+    },
+    {
+      "channel": 1,
+      "time_start": 240,
+      "time_end": 256,
+      "freq_start": 0,
+      "freq_end": 4,
+      "total": 64,
+      "errors": 35,
+      "ber": 0.546875
+    },
+    {
+      "channel": 2,
+      "time_start": 0,
+      "time_end": 16,
+      "freq_start": 4,
+      "freq_end": 8,
+      "total": 64,
+      "errors": 35,
+      "ber": 0.546875
+    },
+    {
+      "channel": 2,
+      "time_start": 64,
+      "time_end": 80,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 64,
+      "errors": 35,
+      "ber": 0.546875
+    }
+  ],
+  "lowest_error_blocks": [
+    {
+      "channel": 7,
+      "time_start": 80,
+      "time_end": 96,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 0,
+      "ber": 0.0
+    },
+    {
+      "channel": 6,
+      "time_start": 128,
+      "time_end": 144,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 0,
+      "ber": 0.0
+    },
+    {
+      "channel": 6,
+      "time_start": 48,
+      "time_end": 64,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 0,
+      "ber": 0.0
+    },
+    {
+      "channel": 6,
+      "time_start": 48,
+      "time_end": 64,
+      "freq_start": 4,
+      "freq_end": 8,
+      "total": 64,
+      "errors": 0,
+      "ber": 0.0
+    },
+    {
+      "channel": 3,
+      "time_start": 176,
+      "time_end": 192,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 0,
+      "ber": 0.0
+    },
+    {
+      "channel": 3,
+      "time_start": 160,
+      "time_end": 176,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 0,
+      "ber": 0.0
+    },
+    {
+      "channel": 3,
+      "time_start": 112,
+      "time_end": 128,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 0,
+      "ber": 0.0
+    },
+    {
+      "channel": 3,
+      "time_start": 0,
+      "time_end": 16,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 64,
+      "errors": 0,
+      "ber": 0.0
+    },
+    {
+      "channel": 7,
+      "time_start": 176,
+      "time_end": 192,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 64,
+      "errors": 1,
+      "ber": 0.015625
+    },
+    {
+      "channel": 7,
+      "time_start": 112,
+      "time_end": 128,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 1,
+      "ber": 0.015625
+    },
+    {
+      "channel": 7,
+      "time_start": 80,
+      "time_end": 96,
+      "freq_start": 4,
+      "freq_end": 8,
+      "total": 64,
+      "errors": 1,
+      "ber": 0.015625
+    },
+    {
+      "channel": 6,
+      "time_start": 48,
+      "time_end": 64,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 64,
+      "errors": 1,
+      "ber": 0.015625
+    },
+    {
+      "channel": 6,
+      "time_start": 16,
+      "time_end": 32,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 1,
+      "ber": 0.015625
+    },
+    {
+      "channel": 3,
+      "time_start": 192,
+      "time_end": 208,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 64,
+      "errors": 1,
+      "ber": 0.015625
+    },
+    {
+      "channel": 3,
+      "time_start": 160,
+      "time_end": 176,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 64,
+      "errors": 1,
+      "ber": 0.015625
+    },
+    {
+      "channel": 3,
+      "time_start": 128,
+      "time_end": 144,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 1,
+      "ber": 0.015625
+    },
+    {
+      "channel": 3,
+      "time_start": 112,
+      "time_end": 128,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 64,
+      "errors": 1,
+      "ber": 0.015625
+    },
+    {
+      "channel": 3,
+      "time_start": 96,
+      "time_end": 112,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 1,
+      "ber": 0.015625
+    },
+    {
+      "channel": 3,
+      "time_start": 80,
+      "time_end": 96,
+      "freq_start": 12,
+      "freq_end": 16,
+      "total": 64,
+      "errors": 1,
+      "ber": 0.015625
+    },
+    {
+      "channel": 3,
+      "time_start": 48,
+      "time_end": 64,
+      "freq_start": 8,
+      "freq_end": 12,
+      "total": 64,
+      "errors": 1,
+      "ber": 0.015625
+    }
+  ]
+}
