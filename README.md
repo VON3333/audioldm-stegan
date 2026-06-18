@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AudioLDM 2
 
 [![arXiv](https://img.shields.io/badge/arXiv-2308.05734-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2308.05734)  [![githubio](https://img.shields.io/badge/GitHub.io-Audio_Samples-blue?logo=Github&style=flat-square)](https://audioldm.github.io/audioldm2/)  [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/haoheliu/audioldm2-text2audio-text2music)  
@@ -234,3 +235,6 @@ If you found this tool useful, please consider citing
   pages={21450-21474}
 }
 ```
+=======
+# audioldm-stegan
+>>>>>>> ee664dcabba6333aaf66c2cf65a7f12a464db44e

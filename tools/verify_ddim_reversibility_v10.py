@@ -16,7 +16,7 @@ from audioldm2.utils import default_audioldm_config, save_wave
 from audioldm2.utilities.audio.stft import TacotronSTFT
 from audioldm2.utilities.audio.tools import wav_to_fbank
 from tools.ecc_utils import bch_decode_metrics, bch_settings, make_bch_payload
-from tools.run_output_utils import create_timestamped_run_dir, output_path
+from tools.run_output_utils import create_timestamped_run_dir, output_path, save_run_metadata
 
 
 def clone_cpu(x):
@@ -1078,6 +1078,7 @@ def main():
     save_pt_path = output_path(run_dir, args.save_pt, "results.pt")
     cover_wav_path = output_path(run_dir, args.save_cover_wav, "cover.wav")
     stego_wav_output_path = output_path(run_dir, args.save_stego_wav, "stego.wav")
+    arguments_json_path, command_txt_path = save_run_metadata(run_dir, args)
     print(f"Run output directory: {run_dir}")
 
     if args.ddim_eta != 0.0:
@@ -1345,6 +1346,8 @@ def main():
         "run_dir": run_dir,
         "report_json": report_json_path,
         "results_pt": save_pt_path,
+        "arguments_json": arguments_json_path,
+        "command_txt": command_txt_path,
         "cover_wav": cover_wav_path,
         "stego_wav": stego_wav_path,
     }

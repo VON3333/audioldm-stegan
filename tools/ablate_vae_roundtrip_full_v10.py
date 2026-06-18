@@ -14,7 +14,7 @@ import numpy as np
 from audioldm2.pipeline import build_model, make_batch_for_text_to_audio, seed_everything
 from audioldm2.latent_diffusion.models.ddim import DDIMSampler
 from tools.ecc_utils import bch_decode_metrics
-from tools.run_output_utils import create_timestamped_run_dir, output_path
+from tools.run_output_utils import create_timestamped_run_dir, output_path, save_run_metadata
 
 
 def diff_metrics(a, b):
@@ -419,6 +419,7 @@ def main():
     run_dir, run_timestamp = create_timestamped_run_dir(args.output_root)
     report_json_path = output_path(run_dir, "", "report.json")
     save_pt_path = output_path(run_dir, args.save_pt, "ablation_results.pt")
+    arguments_json_path, command_txt_path = save_run_metadata(run_dir, args)
     print(f"Run output directory: {run_dir}")
 
     source_data, bit_data = load_experiment_data(args.input_pt)
@@ -674,6 +675,8 @@ def main():
         "run_dir": run_dir,
         "report_json": report_json_path,
         "results_pt": save_pt_path,
+        "arguments_json": arguments_json_path,
+        "command_txt": command_txt_path,
     }
     with open(report_json_path, "w", encoding="utf-8") as report_file:
         json.dump(report, report_file, indent=2, ensure_ascii=False)
